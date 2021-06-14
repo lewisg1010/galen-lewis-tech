@@ -19,8 +19,8 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Welcome to my personal site! I plan to post regularly about startups, technology, and UX design.</p>
-        <p>A bit about me: I'm a Co-Founder at Mark Labs (venture-backed software company in the ESG space) and a Fellow at Glynn Capital (VC in Silicon Valley). I've also worked across Product, Sales, and Marketing at Posh Technologies, a growth-stage conversational AI company. I'm currently an undergrad at Harvard where I study Computer Science and Psychology.</p>
+        <p>Hi, welcome to my personal site! I plan to write every week about startups, technology, and UX design.</p>
+        <p>A bit about me: I'm a Co-Founder at Mark Labs (venture-backed software company in the ESG space) and a Fellow at Glynn Capital (VC in Silicon Valley). I've worked across Product, Sales, and Marketing at Posh Technologies, a growth-stage conversational AI company. I'm currently an undergrad at Harvard where I study Computer Science and Psychology.</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
