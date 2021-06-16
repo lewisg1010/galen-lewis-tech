@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@tryghost/content-api": "^1.5.6",
+    "@tryghost/content-api": "^1.5.7",
     "express": "^4.17.1",
     "gray-matter": "^4.0.3",
     "next": "^10.0.0",

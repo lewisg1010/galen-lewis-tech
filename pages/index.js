@@ -3,13 +3,14 @@ import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
+export async function getPosts() {
+  return await api.posts
+    .browse({
+      limit: "all"
+    })
+    .catch(err => {
+      console.error(err);
+    });
 }
 
 export default function Home({ allPostsData }) {
@@ -24,17 +25,6 @@ export default function Home({ allPostsData }) {
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
       </section>
     </Layout>
   )
