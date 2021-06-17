@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import utilStyles from '../../styles/utils.module.css'
-import config from '../config'
-
+import config from '../../config'
 
 async function getPost(slug: string) {
+        console.log(config)
         const res = await fetch(`${config.blogUrl}/ghost/api/v3/content/posts/slug/${slug}?key=${config.contentApiKey}&fields=title,slug,html,reading_time,feature_image`).then((res) => res.json())
         console.log(res.posts)
         const posts = res.posts

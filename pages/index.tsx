@@ -49,7 +49,7 @@ const Home:React.FC<{ posts: Post[] }> = (props) => {
         <ul>
           {posts.map((post, index) => {
             return <li key={post.slug}>
-              <Link href="/post/[slug]" as={`/post/${post.slug}`}>
+              <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
                 <a>{post.title}</a>
                 </Link></li>
           })}
