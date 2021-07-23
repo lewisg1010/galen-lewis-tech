@@ -16,7 +16,7 @@ type Post = {
 async function getPosts() {
   // curl "https://demo.ghost.io/ghost/api/v3/content/posts/?key=22444f78447824223cefc48062"
   const res = await fetch(
-    'https://www.cms.galen-lewis.tech/ghost/api/v3/content/posts/?key=e549fe0f4a85401eadeeee89db&fields=title,slug,custom_excerpt,reading_time,feature_image').then((res) => res.json())
+    'https://www.cms.glew.tech/ghost/api/v3/content/posts/?key=e549fe0f4a85401eadeeee89db&fields=title,slug,custom_excerpt,reading_time,feature_image').then((res) => res.json())
 
   const posts = res.posts
 
@@ -35,6 +35,9 @@ const Home:React.FC<{ posts: Post[] }> = (props) => {
 
   return (
     <Layout home>
+      <section>
+        <img src="/logo.svg" />
+      </section>
       <Head>
         <title>{siteTitle}</title>
       </Head>
